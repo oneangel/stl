@@ -1,0 +1,61 @@
+.trafficLightWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.trafficLight {
+  background-color: #333;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 5rem;
+}
+
+.light {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.red {
+  background-color: #ffaaaa;
+}
+
+.yellow {
+  background-color: #fff0a5;
+}
+
+.green {
+  background-color: #aaffaa;
+}
+
+.redActive {
+  background-color: #ff0000;
+}
+
+.yellowActive {
+  background-color: #ffd700;
+}
+
+.greenActive {
+  background-color: #00ff00;
+}
+
+/* Contenedor de las etiquetas */
+.labels {
+  margin-left: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.activeLabel {
+  color: #fff;
+  font-size: 2rem;
+  transition: opacity 0.3s ease;
+}

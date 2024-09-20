@@ -1,0 +1,17 @@
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: #333;
+    height: 350px; 
+    border-radius: 20px;
+    overflow: hidden; 
+  }
+  
+  .image {
+    width: 45%; 
+    height: auto;
+    object-fit: cover; 
+  }
+  

@@ -3,3 +3,21 @@
     z-index: 1;
     width: 100%;
 }
+
+.trafficContainer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 40px;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .trafficLight {
+    flex: 1; 
+    margin-right: 20px; 
+  }
+  
+  .trafficImages {
+    flex: 1; 
+  }
