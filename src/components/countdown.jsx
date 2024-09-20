@@ -7,7 +7,7 @@ const UrgeWithPleasureComponent = () => (
     colors={['#004777', '#F7B801', '#A30000', '#A30000']}
     colorsTime={[7, 5, 2, 0]}
   >
-    {({ remainingTime }) => <div className="text-2xl">{remainingTime}</div>}
+    {({ remainingTime }) => <div className="text-3xl font-bold text-white">{remainingTime}</div>}
   </CountdownCircleTimer>
 );
 

@@ -3,8 +3,6 @@ import { useState } from "react";
 import styles from "./style.module.scss";
 import Titles from "./titles";
 import Descriptions from "./descriptions";
-import TrafficLight from "./traffic_light";
-import TrafficImages from "./traffic_image"; 
 
 const data = [
   {
@@ -49,12 +47,6 @@ export default function Projects() {
     <div className={styles.container}>
       <Titles data={data} setSelectedProject={setSelectedProject} />
       <Descriptions data={data} selectedProject={selectedProject} />
-
-      {/* Contenedor para alinear el semáforo y la imagen */}
-      <div className={styles.trafficContainer}>
-        <TrafficLight />
-        <TrafficImages />
-      </div>
     </div>
   );
 }

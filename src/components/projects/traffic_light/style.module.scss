@@ -49,9 +49,12 @@
 /* Contenedor de las etiquetas */
 .labels {
   margin-left: 2.5rem;
+  margin-right: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 270px;
+  min-width: 270px;
 }
 
 .activeLabel {

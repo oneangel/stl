@@ -7,6 +7,7 @@ import SmoothScroll from "@/components/smoothScroll";
 import Projects from "@/components/projects";
 import { SparklesPreview } from "@/components/ui/sparklesPreview";
 import Lighter from "../components/lights";
+import { HoverBorderGradient } from "../components/ui/hover-border-gradient";
 
 import TrafficLight from "../components/projects/traffic_light";
 import TrafficImages from "../components/projects/traffic_image";
@@ -19,21 +20,20 @@ const Earth = dynamic(() => import("@/components/earth"), {
 });
 
 const Semaforo = () => (
-  <>
+  <div className="flex flex-wrap items-center justify-center w-screen">
     <div className="mt-8">
       <UrgeWithPleasureComponent />
     </div>
 
     <div>
-    <TrafficLight />
+      <TrafficLight />
     </div>
 
-    <div>
-    <TrafficImages />
+    <div className="w-[800px]">
+      <TrafficImages />
     </div>
-  </>
+  </div>
 );
-
 
 export default function Home() {
   const [showLights, setShowLights] = useState(false);
@@ -52,13 +52,16 @@ export default function Home() {
             <Semaforo />
           )}
         </main>
-        <div className="mt-8">
-          <button
-            className="px-4 py-2 bg-accent text-background font-bold rounded text-white"
+
+        <div className="flex justify-center m-40 text-2xl text-center">
+          <HoverBorderGradient
             onClick={() => setShowLights(true)}
+            containerClassName="rounded-full"
+            as="button"
+            className="flex items-center space-x-2 text-black bg-white dark:bg-black dark:text-white"
           >
-            Go to Default Page
-          </button>
+            <span>Aceternity UI</span>
+          </HoverBorderGradient>
         </div>
       </SmoothScroll>
     </>
