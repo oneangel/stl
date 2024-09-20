@@ -8,6 +8,9 @@ import Projects from "@/components/projects";
 import { SparklesPreview } from "@/components/ui/sparklesPreview";
 import Lighter from "../components/lights";
 
+import TrafficLight from "../components/projects/traffic_light";
+import TrafficImages from "../components/projects/traffic_image";
+
 import UrgeWithPleasureComponent from "../components/countdown";
 
 const Earth = dynamic(() => import("@/components/earth"), {
@@ -22,10 +25,15 @@ const Semaforo = () => (
     </div>
 
     <div>
-      <Lighter></Lighter>
+    <TrafficLight />
+    </div>
+
+    <div>
+    <TrafficImages />
     </div>
   </>
 );
+
 
 export default function Home() {
   const [showLights, setShowLights] = useState(false);

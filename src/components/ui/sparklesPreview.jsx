@@ -5,8 +5,8 @@ import { SparklesCore } from "../ui/sparkles";
 export function SparklesPreview() {
   return (
     <div className="h-[40rem] pt-40 w-full bg-[#0f0f0f] flex flex-col items-center justify-center overflow-hidden rounded-md">
-      <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20">
-        Smart Trafic Lights
+      <h1 className="md:text-7xl text-3xl lg:text-[100px] font-bold text-center text-white relative z-20">
+        Smart Trafic Light
       </h1>
       <div className="w-[40rem] h-40 relative">
         {/* Gradients */}
