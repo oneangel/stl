@@ -1,24 +1,57 @@
+"use client"; // Asegúrate de colocar esta línea al inicio del archivo
+
 import styles from "./page.module.scss";
-import React from "react";
+import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import SmoothScroll from "@/components/smoothScroll";
 import Projects from "@/components/projects";
 import { SparklesPreview } from "@/components/ui/sparklesPreview";
+import Lighter from "../components/lights";
+
+import UrgeWithPleasureComponent from "../components/countdown";
 
 const Earth = dynamic(() => import("@/components/earth"), {
   ssr: false,
-  loading: () => <img src="/assets/placeholder.png"></img>,
+  loading: () => <img src="/assets/placeholder.png" alt="placeholder" />,
 });
 
+const Semaforo = () => (
+  <>
+    <div className="mt-8">
+      <UrgeWithPleasureComponent />
+    </div>
+
+    <div>
+      <Lighter></Lighter>
+    </div>
+  </>
+);
+
 export default function Home() {
+  const [showLights, setShowLights] = useState(false);
+
   return (
     <>
       <SmoothScroll>
         <SparklesPreview />
         <main className={styles.main}>
-          <Earth />
-          <Projects />
+          {!showLights ? (
+            <>
+              <Earth />
+              <Projects />
+            </>
+          ) : (
+            <Semaforo />
+          )}
         </main>
+        <div className="mt-8">
+          <button
+            className="px-4 py-2 bg-accent text-background font-bold rounded text-white"
+            onClick={() => setShowLights(true)}
+          >
+            Go to Default Page
+          </button>
+        </div>
       </SmoothScroll>
     </>
   );
